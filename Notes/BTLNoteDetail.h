@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface BTLNoteDetail : NSObject
+
+@property (strong, nonatomic) NSString *noteTitle;
+@property (strong, nonatomic) NSString *noteDescription;
+@property (strong, nonatomic) CLLocation *notelocation;
 
 @end

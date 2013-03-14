@@ -7,7 +7,42 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
+#import "BTLNoteDetail.h"
+#import "BTLTableViewController.h"
+#import "BTLLocationManager.h"
 
-@interface BTLNoteViewController : UIViewController
+
+
+@protocol NoteSelectorDelegate <NSObject>
+
+@optional
+
+- (void)updateNote:(NSString*)descriptionString withTitle:(NSString *)titleString atIndex:(NSInteger *)index;
 
 @end
+
+
+
+@interface BTLNoteViewController : UIViewController <LocationControllerDelegate>
+
+
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (weak, nonatomic) BTLNoteDetail *currentNote;
+@property NSInteger *currentNoteIndex;
+@property (nonatomic, weak) id <NoteSelectorDelegate> delegate;
+
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+
+-(void)setFields;
+
+
+@end
+
+
+
+

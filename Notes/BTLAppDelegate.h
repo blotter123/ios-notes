@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BTLLocationManager.h"
 
 @interface BTLAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+//instance of singelton class to be shared between all classes
+@property (strong, nonatomic) BTLLocationManager *sharedLocationManager;
 
 @end

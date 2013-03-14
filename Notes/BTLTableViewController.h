@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BTLLocationManager.h"
 
 @interface BTLTableViewController : UITableViewController
+
+
+
+
+@property (strong,nonatomic) NSMutableArray *notes; //elements in array are of type BTLNoteDetail
+ 
 
 @end

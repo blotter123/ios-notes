@@ -23,6 +23,13 @@
 		AC5B638A16E8DBD700806D77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B636516E8DBD700806D77 /* Foundation.framework */; };
 		AC5B639216E8DBD700806D77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC5B639016E8DBD700806D77 /* InfoPlist.strings */; };
 		AC5B639516E8DBD700806D77 /* NotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5B639416E8DBD700806D77 /* NotesTests.m */; };
+		AC5B63A316E8F49400806D77 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B63A216E8F49400806D77 /* CoreLocation.framework */; };
+		AC5B63A516E8F4E100806D77 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B63A416E8F4E100806D77 /* MapKit.framework */; };
+		AC5B63A816E8F5F400806D77 /* BTLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5B63A716E8F5F400806D77 /* BTLTableViewController.m */; };
+		AC5B63B016EA095F00806D77 /* BTLNoteDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5B63AF16EA095F00806D77 /* BTLNoteDetail.m */; };
+		AC5B63B716EA142B00806D77 /* BTLNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5B63B616EA142B00806D77 /* BTLNoteViewController.m */; };
+		AC5B63CA16EBBE1200806D77 /* BTLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5B63C916EBBE1200806D77 /* BTLLocationManager.m */; };
+		ACEC261016EEAD86001DAEC1 /* BTLLocationSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEC260F16EEAD86001DAEC1 /* BTLLocationSelectController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +65,18 @@
 		AC5B639116E8DBD700806D77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC5B639316E8DBD700806D77 /* NotesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotesTests.h; sourceTree = "<group>"; };
 		AC5B639416E8DBD700806D77 /* NotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotesTests.m; sourceTree = "<group>"; };
+		AC5B63A216E8F49400806D77 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AC5B63A416E8F4E100806D77 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AC5B63A616E8F5F400806D77 /* BTLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLTableViewController.h; sourceTree = "<group>"; };
+		AC5B63A716E8F5F400806D77 /* BTLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLTableViewController.m; sourceTree = "<group>"; };
+		AC5B63AE16EA095F00806D77 /* BTLNoteDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLNoteDetail.h; sourceTree = "<group>"; };
+		AC5B63AF16EA095F00806D77 /* BTLNoteDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLNoteDetail.m; sourceTree = "<group>"; };
+		AC5B63B516EA142B00806D77 /* BTLNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLNoteViewController.h; sourceTree = "<group>"; };
+		AC5B63B616EA142B00806D77 /* BTLNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLNoteViewController.m; sourceTree = "<group>"; };
+		AC5B63C816EBBE1200806D77 /* BTLLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLLocationManager.h; sourceTree = "<group>"; };
+		AC5B63C916EBBE1200806D77 /* BTLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLLocationManager.m; sourceTree = "<group>"; };
+		ACEC260E16EEAD86001DAEC1 /* BTLLocationSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLLocationSelectController.h; sourceTree = "<group>"; };
+		ACEC260F16EEAD86001DAEC1 /* BTLLocationSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLLocationSelectController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5B63A516E8F4E100806D77 /* MapKit.framework in Frameworks */,
+				AC5B63A316E8F49400806D77 /* CoreLocation.framework in Frameworks */,
 				AC5B636416E8DBD700806D77 /* UIKit.framework in Frameworks */,
 				AC5B636616E8DBD700806D77 /* Foundation.framework in Frameworks */,
 				AC5B636816E8DBD700806D77 /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +108,8 @@
 		AC5B635416E8DBD600806D77 = {
 			isa = PBXGroup;
 			children = (
+				AC5B63A416E8F4E100806D77 /* MapKit.framework */,
+				AC5B63A216E8F49400806D77 /* CoreLocation.framework */,
 				AC5B636916E8DBD700806D77 /* Notes */,
 				AC5B638D16E8DBD700806D77 /* NotesTests */,
 				AC5B636216E8DBD600806D77 /* Frameworks */,
@@ -117,12 +140,22 @@
 		AC5B636916E8DBD700806D77 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				AC5B63B516EA142B00806D77 /* BTLNoteViewController.h */,
+				AC5B63B616EA142B00806D77 /* BTLNoteViewController.m */,
 				AC5B637216E8DBD700806D77 /* BTLAppDelegate.h */,
 				AC5B637316E8DBD700806D77 /* BTLAppDelegate.m */,
 				AC5B637B16E8DBD700806D77 /* MainStoryboard.storyboard */,
 				AC5B637E16E8DBD700806D77 /* BTLViewController.h */,
 				AC5B637F16E8DBD700806D77 /* BTLViewController.m */,
 				AC5B636A16E8DBD700806D77 /* Supporting Files */,
+				AC5B63A616E8F5F400806D77 /* BTLTableViewController.h */,
+				AC5B63A716E8F5F400806D77 /* BTLTableViewController.m */,
+				AC5B63AE16EA095F00806D77 /* BTLNoteDetail.h */,
+				AC5B63AF16EA095F00806D77 /* BTLNoteDetail.m */,
+				AC5B63C816EBBE1200806D77 /* BTLLocationManager.h */,
+				AC5B63C916EBBE1200806D77 /* BTLLocationManager.m */,
+				ACEC260E16EEAD86001DAEC1 /* BTLLocationSelectController.h */,
+				ACEC260F16EEAD86001DAEC1 /* BTLLocationSelectController.m */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -274,6 +307,11 @@
 				AC5B637016E8DBD700806D77 /* main.m in Sources */,
 				AC5B637416E8DBD700806D77 /* BTLAppDelegate.m in Sources */,
 				AC5B638016E8DBD700806D77 /* BTLViewController.m in Sources */,
+				AC5B63A816E8F5F400806D77 /* BTLTableViewController.m in Sources */,
+				AC5B63B016EA095F00806D77 /* BTLNoteDetail.m in Sources */,
+				AC5B63B716EA142B00806D77 /* BTLNoteViewController.m in Sources */,
+				AC5B63CA16EBBE1200806D77 /* BTLLocationManager.m in Sources */,
+				ACEC261016EEAD86001DAEC1 /* BTLLocationSelectController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +486,7 @@
 				AC5B639A16E8DBD700806D77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC5B639B16E8DBD700806D77 /* Build configuration list for PBXNativeTarget "NotesTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +495,7 @@
 				AC5B639D16E8DBD700806D77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

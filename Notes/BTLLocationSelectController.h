@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BTLNoteViewController.h"
+#import "BTLTableViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface BTLLocationSelectController : UITableViewController
+
+@protocol LocationSelectorDelegate <NSObject>
+
+@optional
+
+- (void)setLocation:(CLLocation*)location;
+
+@end
+
+
+
+@interface BTLLocationSelectController : UITableViewController <NSURLConnectionDataDelegate>
+
+@property (nonatomic, weak) id <LocationSelectorDelegate> delegate;
 
 @end
