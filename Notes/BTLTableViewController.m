@@ -42,6 +42,7 @@
         if (self.debug) NSLog(@"[%@ %@] no NSFetchedResultsController (yet?)", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
     }
     [self.tableView reloadData];
+    NSLog(@"perform fetch gets executed");
 }
 
 - (void)setFetchedResultsController:(NSFetchedResultsController *)newfrc
@@ -117,12 +118,21 @@
      
      */
     
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"FailedBankInfo" inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    _notes =[[self.dataManager managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+    
     [self.tableView reloadData];
 }
 
 -(void)setNotes:(NSMutableArray *)notes
 {
-    _notes = notes;
+    //_notes = notes;
+    _notes = self.dataManager.getAllNotes;
     [self.tableView reloadData];
 }
 
@@ -139,7 +149,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    
+    NSInteger *numRow = [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects];
+    NSLog(@"number of rows is %d", (int) numRow);
      return [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects];
     
     //return [self.notes count];  //original non-persistent method
@@ -152,6 +163,7 @@
     // Configure the cell...
     
     cell.textLabel.text = [self getTitleForRow:indexPath.row];
+    NSLog(@"cell title @%", cell.textLabel.text);
     return cell;
 }
 
@@ -295,11 +307,16 @@
     
     
     // Create and configure a new instance of the Note entity.
-   //[_dataManager addNote];
+    CLLocation *currentLocation = [BTLLocationManager sharedLocationManager].locationManager.location;
+    NSLog(@"when new lat: %f,  when new lon:%f", currentLocation.coordinate.latitude, currentLocation.coordinate.longitude);
+
+    
+    [_dataManager addNote:(currentLocation.coordinate.latitude) longitude:(currentLocation.coordinate.longitude)];
     
     
     //orgiginal non-persistent creation
     
+    /*
     BTLNoteDetail *addNote = [[BTLNoteDetail alloc]init];
     //NSLog(@"%b", [BTLLocationManager sharedLocationManager].locationManager.location);
     CLLocation *currentLocation = [BTLLocationManager sharedLocationManager].locationManager.location;
@@ -308,7 +325,13 @@
     addNote.noteDescription = @"New Description here";
     addNote.notelocation = currentLocation;
     [_notes addObject:addNote];
+     
+    */
+    [self performFetch];
+    
     [self.tableView reloadData];
+    
+    
 }
 
 

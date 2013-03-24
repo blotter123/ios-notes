@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Notes/BTLTableViewController.m"
-         timestampString = "385835460.51622"
+         timestampString = "385854777.972106"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "319"
-         endingLineNumber = "319"
+         startingLineNumber = "334"
+         endingLineNumber = "334"
          landmarkName = "@implementation BTLTableViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -47,12 +47,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Notes/BTLTableViewController.m"
-         timestampString = "385835460.51622"
+         timestampString = "385853474.230125"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "179"
-         endingLineNumber = "179"
+         startingLineNumber = "183"
+         endingLineNumber = "183"
          landmarkName = "-prepareForSegue:sender:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Notes/BTLDataManagers.m"
+         timestampString = "385854462.248815"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "109"
+         endingLineNumber = "109"
+         landmarkName = "-managedObjectModel"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Notes/BTLTableViewController.m"
+         timestampString = "385854683.118245"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "306"
+         endingLineNumber = "306"
+         landmarkName = "-newNote:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

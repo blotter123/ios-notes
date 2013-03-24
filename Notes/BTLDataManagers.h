@@ -12,8 +12,10 @@
 @class Note;
 @interface BTLDataManagers : NSObject
 
-- (BOOL)addNote;
+- (BOOL)addNote:(double)lat longitude:(double)lon;
 - (NSArray *)getAllNotes;
 - (BOOL)updateNote:(Note *)note withTitle:(NSString *)text description:(NSString *)description latitude:(double)lat longitude:(double)lon;
+
+- (NSManagedObjectContext *)managedObjectContext
 
 @end

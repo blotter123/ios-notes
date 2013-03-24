@@ -12,7 +12,7 @@
 
 #import <CoreData/CoreData.h>
 
-#define kBTLEntityName @"Idea"
+#define kBTLEntityName @"Note"
 #define kBTLSaveError @"Whoops, couldn't save: %@"
 
 @interface BTLDataManagers () 
@@ -25,10 +25,14 @@
 
 @implementation BTLDataManagers
 
-- (BOOL)addNote{
+- (BOOL)addNote:(double)lat longitude:(double)lon {
     
     NSManagedObjectContext *context = [self managedObjectContext];
     Note *note = [NSEntityDescription insertNewObjectForEntityForName:kBTLEntityName inManagedObjectContext:context];
+    note.noteTitle = @"New Title here";
+    note.noteDescription = @"New Description here";
+    note.hasLocation.latitude = [NSNumber numberWithDouble:lat];
+    note.hasLocation.longitude = [NSNumber numberWithDouble:lon];
     NSError *error;
     if (![context save:&error]) {
         NSLog(kBTLSaveError, [error localizedDescription]);
@@ -41,8 +45,15 @@
 
 - (NSArray *)getAllNotes{
     
-    
-    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:kBTLEntityName inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
+    [fetchRequest setSortDescriptors:@[sort]];
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    return fetchedObjects;
 }
 
 - (BOOL)updateNote:(Note *)note withTitle:(NSString *)title description:(NSString *)description latitude:(double)lat longitude:(double)lon {
@@ -89,9 +100,14 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"GoudaCD" withExtension:@"momd"];
+    /*
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Note" withExtension:@"momd"];
+    NSLog(@"%@", modelURL);
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
+    */
+    NSManagedObjectModel *managedObjectContent= [NSManagedObjectModel mergedModelFromBundles:nil];
+    return managedObjectContent;
 }
 
 // Returns the persistent store coordinator for the application.
@@ -104,8 +120,13 @@
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Notes.sqlite"];
     
+    NSLog(@"storeURL is %@", storeURL.absoluteString);
+    
     NSError *error = nil;
+    
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    NSLog(@"%@", [self managedObjectModel]);
+    NSLog(@"test");
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         /*
          Replace this implementation with code to handle the error appropriately.

@@ -37,6 +37,18 @@
 		ACF7001516FF117700CF9A4D /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF7001416FF117700CF9A4D /* Note.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		ACF7001616FF8F5E00CF9A4D /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = wrapper.xcdatamodel;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# momc\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
 		AC5B638B16E8DBD700806D77 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -227,6 +239,7 @@
 				AC5B635D16E8DBD600806D77 /* Resources */,
 			);
 			buildRules = (
+				ACF7001616FF8F5E00CF9A4D /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
