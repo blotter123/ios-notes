@@ -29,7 +29,12 @@
 		AC5B63B016EA095F00806D77 /* BTLNoteDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5B63AF16EA095F00806D77 /* BTLNoteDetail.m */; };
 		AC5B63B716EA142B00806D77 /* BTLNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5B63B616EA142B00806D77 /* BTLNoteViewController.m */; };
 		AC5B63CA16EBBE1200806D77 /* BTLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5B63C916EBBE1200806D77 /* BTLLocationManager.m */; };
+		AC7AC03116FE956500657EE9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7AC03016FE956500657EE9 /* CoreData.framework */; };
+		AC7AC03416FE95F900657EE9 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC7AC03216FE95F900657EE9 /* Notes.xcdatamodeld */; };
+		AC7AC03716FE9DD400657EE9 /* BTLDataManagers.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7AC03616FE9DD400657EE9 /* BTLDataManagers.m */; };
 		ACEC261016EEAD86001DAEC1 /* BTLLocationSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEC260F16EEAD86001DAEC1 /* BTLLocationSelectController.m */; };
+		ACF7001216FF117700CF9A4D /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF7001116FF117700CF9A4D /* Location.m */; };
+		ACF7001516FF117700CF9A4D /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF7001416FF117700CF9A4D /* Note.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +80,16 @@
 		AC5B63B616EA142B00806D77 /* BTLNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLNoteViewController.m; sourceTree = "<group>"; };
 		AC5B63C816EBBE1200806D77 /* BTLLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLLocationManager.h; sourceTree = "<group>"; };
 		AC5B63C916EBBE1200806D77 /* BTLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLLocationManager.m; sourceTree = "<group>"; };
+		AC7AC03016FE956500657EE9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AC7AC03316FE95F900657EE9 /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
+		AC7AC03516FE9DD400657EE9 /* BTLDataManagers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLDataManagers.h; sourceTree = "<group>"; };
+		AC7AC03616FE9DD400657EE9 /* BTLDataManagers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLDataManagers.m; sourceTree = "<group>"; };
 		ACEC260E16EEAD86001DAEC1 /* BTLLocationSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLLocationSelectController.h; sourceTree = "<group>"; };
 		ACEC260F16EEAD86001DAEC1 /* BTLLocationSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLLocationSelectController.m; sourceTree = "<group>"; };
+		ACF7001016FF117700CF9A4D /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		ACF7001116FF117700CF9A4D /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		ACF7001316FF117700CF9A4D /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		ACF7001416FF117700CF9A4D /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC7AC03116FE956500657EE9 /* CoreData.framework in Frameworks */,
 				AC5B63A516E8F4E100806D77 /* MapKit.framework in Frameworks */,
 				AC5B63A316E8F49400806D77 /* CoreLocation.framework in Frameworks */,
 				AC5B636416E8DBD700806D77 /* UIKit.framework in Frameworks */,
@@ -108,6 +122,7 @@
 		AC5B635416E8DBD600806D77 = {
 			isa = PBXGroup;
 			children = (
+				AC7AC03016FE956500657EE9 /* CoreData.framework */,
 				AC5B63A416E8F4E100806D77 /* MapKit.framework */,
 				AC5B63A216E8F49400806D77 /* CoreLocation.framework */,
 				AC5B636916E8DBD700806D77 /* Notes */,
@@ -156,6 +171,13 @@
 				AC5B63C916EBBE1200806D77 /* BTLLocationManager.m */,
 				ACEC260E16EEAD86001DAEC1 /* BTLLocationSelectController.h */,
 				ACEC260F16EEAD86001DAEC1 /* BTLLocationSelectController.m */,
+				AC7AC03216FE95F900657EE9 /* Notes.xcdatamodeld */,
+				ACF7001316FF117700CF9A4D /* Note.h */,
+				ACF7001416FF117700CF9A4D /* Note.m */,
+				ACF7001016FF117700CF9A4D /* Location.h */,
+				ACF7001116FF117700CF9A4D /* Location.m */,
+				AC7AC03516FE9DD400657EE9 /* BTLDataManagers.h */,
+				AC7AC03616FE9DD400657EE9 /* BTLDataManagers.m */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -312,6 +334,10 @@
 				AC5B63B716EA142B00806D77 /* BTLNoteViewController.m in Sources */,
 				AC5B63CA16EBBE1200806D77 /* BTLLocationManager.m in Sources */,
 				ACEC261016EEAD86001DAEC1 /* BTLLocationSelectController.m in Sources */,
+				AC7AC03416FE95F900657EE9 /* Notes.xcdatamodeld in Sources */,
+				AC7AC03716FE9DD400657EE9 /* BTLDataManagers.m in Sources */,
+				ACF7001216FF117700CF9A4D /* Location.m in Sources */,
+				ACF7001516FF117700CF9A4D /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +443,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Notes/Notes-Prefix.pch";
 				INFOPLIST_FILE = "Notes/Notes-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -428,6 +455,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Notes/Notes-Prefix.pch";
 				INFOPLIST_FILE = "Notes/Notes-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -498,6 +526,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC7AC03216FE95F900657EE9 /* Notes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC7AC03316FE95F900657EE9 /* Notes.xcdatamodel */,
+			);
+			currentVersion = AC7AC03316FE95F900657EE9 /* Notes.xcdatamodel */;
+			path = Notes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AC5B635616E8DBD600806D77 /* Project object */;
 }

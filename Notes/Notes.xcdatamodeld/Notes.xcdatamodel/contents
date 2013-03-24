@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12C3012" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="belongsToNotes" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="hasLocation" inverseEntity="Note" syncable="YES"/>
+    </entity>
+    <entity name="Note" representedClassName="Note" syncable="YES">
+        <attribute name="noteDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noteLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noteTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasLocation" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="belongsToNotes" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Note" positionX="160" positionY="192" width="128" height="103"/>
+        <element name="Location" positionX="376" positionY="189" width="128" height="73"/>
+    </elements>
+</model>

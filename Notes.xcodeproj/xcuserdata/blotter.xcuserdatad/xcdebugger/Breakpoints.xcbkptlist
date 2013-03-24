@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Notes/BTLTableViewController.h"
-         timestampString = "384551222.951749"
+         timestampString = "385835460.51622"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "20"
-         endingLineNumber = "20"
+         startingLineNumber = "50"
+         endingLineNumber = "50"
          landmarkName = "@interface BTLTableViewController"
          landmarkType = "2">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Notes/BTLTableViewController.m"
-         timestampString = "384751712.183385"
+         timestampString = "385835460.51622"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "168"
-         endingLineNumber = "168"
+         startingLineNumber = "319"
+         endingLineNumber = "319"
          landmarkName = "@implementation BTLTableViewController"
          landmarkType = "3">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Notes/BTLTableViewController.m"
-         timestampString = "384751712.183385"
+         timestampString = "385835460.51622"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "117"
-         endingLineNumber = "117"
+         startingLineNumber = "179"
+         endingLineNumber = "179"
          landmarkName = "-prepareForSegue:sender:"
          landmarkType = "5">
       </FileBreakpoint>
